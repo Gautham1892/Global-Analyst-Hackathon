@@ -60,7 +60,13 @@ if start_chat and uploaded_directory:
             # Create the initial chat session with transcripts
             history = [
                 {
-                    --- CONFIGURATION TRAINING LOGIC TO BE USED HERE ---
+                    "role": "user",
+                    "parts": [
+                        "You will be given transcripts of different Zoom calls at the start of the chat. "
+                        "You are to analyze them deeply and have memory of them. "
+                        "You will then be used as a query tool for that user whereby they would ask you details from the transcripts. "
+                        "Answer only what's in the transcripts and provide summaries of a call if asked for. "
+                        'Just reply "Latest update completed" to the message that gives you the transcripts.',
                     ],
                 }
             ]
